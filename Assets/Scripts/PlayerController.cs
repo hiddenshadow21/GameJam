@@ -9,8 +9,7 @@ public class PlayerController : MonoBehaviour
     float speedX = 1;
     [SerializeField]
     float speedY = 1;
-    [SerializeField]
-    float maxHealth = 3;
+    public float maxHealth = 3;
 
     public float Health { get { return currentHealth; } }
     float currentHealth;
