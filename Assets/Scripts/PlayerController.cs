@@ -12,12 +12,18 @@ public class PlayerController : MonoBehaviour
     public float maxHealth = 3;
 
     public float Health { get { return currentHealth; } }
+
     float currentHealth;
+
+    public bool ReviveAvailable { get { return revive; } }
+    [SerializeField]
+    private bool revive = false;
+
 
     // Start is called before the first frame update
     void Start()
     {
-        currentHealth = maxHealth;
+        currentHealth = 2;// maxHealth;
     }
 
     // Update is called once per frame
@@ -38,5 +44,10 @@ public class PlayerController : MonoBehaviour
     {
         currentHealth = Mathf.Clamp(currentHealth + amount, 0, maxHealth);
         Debug.Log($"{currentHealth}/{maxHealth}");
+    }
+
+    public void AddRevive()
+    {
+        revive = true;
     }
 }

@@ -2,21 +2,17 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class HealthCollectibleController : MonoBehaviour
+public class ReviveCollectible : MonoBehaviour
 {
-    [SerializeField]
-    float amount;
-
     private void OnTriggerEnter2D(Collider2D other)
     {
         Debug.Log("Trigger entered: " + other);
         var player = other.GetComponent<PlayerController>();
-        if (player == null)
+        if (player == null || player.ReviveAvailable)
             return;
-        if (player.Health < player.maxHealth)
-        {
-            player.ChangeHealth(amount);
-            Destroy(gameObject);
-        }
+
+        Debug.Log("Added revive");
+        player.AddRevive();
+        Destroy(gameObject);
     }
 }
