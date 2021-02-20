@@ -21,18 +21,21 @@ public class PlayerController : MonoBehaviour
     private bool revive = false;
 
 
-    //UI hearths
+    //UI
     [SerializeField]
     private Image[] hearths;
     [SerializeField]
     private Sprite fullHearth;
     [SerializeField]
     private Sprite emptyHearth;
+    [SerializeField]
+    private Image reviveImg;
 
     // Start is called before the first frame update
     void Start()
     {
         currentHealth = maxHealth;
+        reviveImg.enabled = false;
     }
 
     // Update is called once per frame
@@ -67,5 +70,6 @@ public class PlayerController : MonoBehaviour
     public void AddRevive()
     {
         revive = true;
+        reviveImg.enabled = true;
     }
 }
