@@ -7,6 +7,7 @@ public class PlayerController : MonoBehaviour
 {
     [SerializeField]
     float speedX = 1;
+
     [SerializeField]
     float speedY = 1;
     public float maxHealth = 3;
@@ -16,6 +17,7 @@ public class PlayerController : MonoBehaviour
     float currentHealth;
 
     public bool ReviveAvailable { get { return revive; } }
+
     [SerializeField]
     private bool revive = false;
 
