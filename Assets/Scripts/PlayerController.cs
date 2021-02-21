@@ -23,11 +23,11 @@ public class PlayerController : MonoBehaviour
 
     //UI
     [SerializeField]
-    private Image[] hearths;
+    private Image[] lives;
     [SerializeField]
-    private Sprite fullHearth;
+    private Sprite fullHP;
     [SerializeField]
-    private Sprite emptyHearth;
+    private Sprite noHP;
     [SerializeField]
     private Image reviveImg;
 
@@ -36,6 +36,7 @@ public class PlayerController : MonoBehaviour
     {
         currentHealth = maxHealth;
         reviveImg.enabled = false;
+        UpdateUILives();
     }
 
     // Update is called once per frame
@@ -55,15 +56,19 @@ public class PlayerController : MonoBehaviour
     public void ChangeHealth(float amount)
     {
         currentHealth = Mathf.Clamp(currentHealth + amount, 0, maxHealth);
-        UpdateUIHearths();
+        UpdateUILives();
         Debug.Log($"{currentHealth}/{maxHealth}");
     }
 
-    private void UpdateUIHearths()
+    private void UpdateUILives()
     {
-        for (int i = 0; i < hearths.Length; i++)
+        for (int i = 0; i < lives.Length; i++)
         {
-            hearths[i].sprite = (i < currentHealth ? fullHearth : emptyHearth);
+            lives[i].sprite = (i < currentHealth ? fullHP : noHP);
+            if (i >= maxHealth)
+                lives[i].enabled = false;
+            else
+                lives[i].enabled = true;
         }
     }
 
