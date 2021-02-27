@@ -31,6 +31,12 @@ public class PlayerController : MonoBehaviour
     [SerializeField]
     private Image reviveImg;
 
+    [SerializeField]
+    private Animator animator;
+    [SerializeField]
+    private SpriteRenderer spriteRenderer;
+
+
     // Start is called before the first frame update
     void Start()
     {
@@ -48,8 +54,15 @@ public class PlayerController : MonoBehaviour
     private void HandleMovement()
     {
         float horizontal = Input.GetAxis("Horizontal")* speedX * Time.deltaTime;
+        if (horizontal < 0)
+            spriteRenderer.flipX = true;
+        if(horizontal > 0)
+            spriteRenderer.flipX = false;
+
         float vertical = Input.GetAxis("Vertical")* speedY * Time.deltaTime;
         var moveDir = new Vector2(horizontal,vertical);
+        animator.SetFloat("Speed", Mathf.Abs(moveDir.magnitude));
+
         transform.Translate(moveDir);
     }
 
