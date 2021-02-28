@@ -10,6 +10,7 @@ public class PlayerController : MonoBehaviour
     float speedX = 1;
     [SerializeField]
     float speedY = 1;
+    private bool isFacingRight;
 
     public float maxHealth = 3;
     public float Health { get { return currentHealth; } }
@@ -31,6 +32,12 @@ public class PlayerController : MonoBehaviour
     [SerializeField]
     private Image reviveImg;
 
+    [SerializeField]
+    private Animator animator;
+    [SerializeField]
+    private SpriteRenderer spriteRenderer;
+
+
     // Start is called before the first frame update
     void Start()
     {
@@ -48,9 +55,27 @@ public class PlayerController : MonoBehaviour
     private void HandleMovement()
     {
         float horizontal = Input.GetAxis("Horizontal")* speedX * Time.deltaTime;
+        if (horizontal < 0 && !isFacingRight)
+            Flip();
+        if (horizontal > 0 && isFacingRight)
+            Flip();
+
         float vertical = Input.GetAxis("Vertical")* speedY * Time.deltaTime;
         var moveDir = new Vector2(horizontal,vertical);
+        animator.SetFloat("Speed", Mathf.Abs(moveDir.magnitude));
+
         transform.Translate(moveDir);
+    }
+
+    private void Flip()
+    {
+        // Switch the way the player is labelled as facing.
+        isFacingRight = !isFacingRight;
+
+        // Multiply the player's x local scale by -1.
+        Vector3 theScale = transform.localScale;
+        theScale.x *= -1;
+        transform.localScale = theScale;
     }
 
     public void ChangeHealth(float amount)
