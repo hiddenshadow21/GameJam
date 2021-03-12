@@ -82,7 +82,16 @@ public class PlayerController : MonoBehaviour
     {
         currentHealth = Mathf.Clamp(currentHealth + amount, 0, maxHealth);
         UpdateUILives();
+        if (currentHealth == 0)
+            animator.SetTrigger("Death");
+        if (amount < 0)
+            animator.SetTrigger("Damaged");
         Debug.Log($"{currentHealth}/{maxHealth}");
+    }
+
+    public void onDeathAnimationFinished()
+    {
+        gameObject.SetActive(false);
     }
 
     private void UpdateUILives()

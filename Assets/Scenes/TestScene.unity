@@ -1339,5 +1339,60 @@ PrefabInstance:
       propertyPath: reviveImg
       value: 
       objectReference: {fileID: 828444625}
+    - target: {fileID: 7390711566715313823, guid: d69cb25b57cb73e408e6827e97ec2081,
+        type: 3}
+      propertyPath: lives.Array.size
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 7390711566715313823, guid: d69cb25b57cb73e408e6827e97ec2081,
+        type: 3}
+      propertyPath: lives.Array.data[0]
+      value: 
+      objectReference: {fileID: 743245143}
+    - target: {fileID: 7390711566715313823, guid: d69cb25b57cb73e408e6827e97ec2081,
+        type: 3}
+      propertyPath: lives.Array.data[1]
+      value: 
+      objectReference: {fileID: 233336751}
+    - target: {fileID: 7390711566715313823, guid: d69cb25b57cb73e408e6827e97ec2081,
+        type: 3}
+      propertyPath: lives.Array.data[2]
+      value: 
+      objectReference: {fileID: 338278339}
+    - target: {fileID: 7390711566715313823, guid: d69cb25b57cb73e408e6827e97ec2081,
+        type: 3}
+      propertyPath: lives.Array.data[3]
+      value: 
+      objectReference: {fileID: 1351522069}
+    - target: {fileID: 7390711566715313823, guid: d69cb25b57cb73e408e6827e97ec2081,
+        type: 3}
+      propertyPath: lives.Array.data[4]
+      value: 
+      objectReference: {fileID: 1588923401}
+    - target: {fileID: 7390711566715313823, guid: d69cb25b57cb73e408e6827e97ec2081,
+        type: 3}
+      propertyPath: lives.Array.data[5]
+      value: 
+      objectReference: {fileID: 1588923401}
+    - target: {fileID: 7390711566715313823, guid: d69cb25b57cb73e408e6827e97ec2081,
+        type: 3}
+      propertyPath: lives.Array.data[6]
+      value: 
+      objectReference: {fileID: 233336751}
+    - target: {fileID: 7390711566715313823, guid: d69cb25b57cb73e408e6827e97ec2081,
+        type: 3}
+      propertyPath: lives.Array.data[7]
+      value: 
+      objectReference: {fileID: 338278339}
+    - target: {fileID: 7390711566715313823, guid: d69cb25b57cb73e408e6827e97ec2081,
+        type: 3}
+      propertyPath: lives.Array.data[8]
+      value: 
+      objectReference: {fileID: 1351522069}
+    - target: {fileID: 7390711566715313823, guid: d69cb25b57cb73e408e6827e97ec2081,
+        type: 3}
+      propertyPath: lives.Array.data[9]
+      value: 
+      objectReference: {fileID: 1588923401}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d69cb25b57cb73e408e6827e97ec2081, type: 3}
