@@ -15,7 +15,7 @@ public class HealthCollectible : MonoBehaviour
             return;
 
         player.ChangeHealth(amount);
-        player.GetComponent<Animator>().SetTrigger("Szlug");
+        //player.GetComponent<Animator>().SetTrigger("Szlug");
         Destroy(gameObject);
     }
 }

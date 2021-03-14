@@ -10,9 +10,11 @@ public class PlayerCombat : MonoBehaviour
     [SerializeField]
     private Transform punchPoint;
     [SerializeField]
+    private float punchRange = 0.5f;
+    [SerializeField]
     private Transform kickPoint;
     [SerializeField]
-    private float attackRange = 0.5f;
+    private float kickRange = 0.5f;
     [SerializeField]
     private LayerMask enemyLayers;
 
@@ -42,7 +44,7 @@ public class PlayerCombat : MonoBehaviour
     private void Punch()
     {
         animator.SetTrigger("Punch");
-        Collider2D[] hitEnemies = Physics2D.OverlapCircleAll(punchPoint.position, attackRange, enemyLayers);
+        Collider2D[] hitEnemies = Physics2D.OverlapCircleAll(punchPoint.position, punchRange, enemyLayers);
 
         foreach (var enemy in hitEnemies)
         {
@@ -53,7 +55,7 @@ public class PlayerCombat : MonoBehaviour
     private void Kick()
     {
         animator.SetTrigger("Kick");
-        Collider2D[] hitEnemies = Physics2D.OverlapCircleAll(kickPoint.position, attackRange, enemyLayers);
+        Collider2D[] hitEnemies = Physics2D.OverlapCircleAll(kickPoint.position, kickRange, enemyLayers);
 
         foreach (var enemy in hitEnemies)
         {
@@ -63,7 +65,7 @@ public class PlayerCombat : MonoBehaviour
 
     private void OnDrawGizmosSelected()
     {
-        Gizmos.DrawWireSphere(punchPoint.position, attackRange);
-        Gizmos.DrawWireSphere(kickPoint.position, attackRange);
+        Gizmos.DrawWireSphere(punchPoint.position, punchRange);
+        Gizmos.DrawWireSphere(kickPoint.position, kickRange);
     }
 }

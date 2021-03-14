@@ -36,12 +36,14 @@ public class PlayerController : MonoBehaviour
     private Animator animator;
     [SerializeField]
     private SpriteRenderer spriteRenderer;
+    [SerializeField]
+    private LevelManager manager;
 
 
     // Start is called before the first frame update
     void Start()
     {
-        currentHealth = maxHealth;
+        currentHealth = 2; //maxHealth;
         reviveImg.enabled = false;
         UpdateUILives();
     }
@@ -83,15 +85,33 @@ public class PlayerController : MonoBehaviour
         currentHealth = Mathf.Clamp(currentHealth + amount, 0, maxHealth);
         UpdateUILives();
         if (currentHealth == 0)
+        {
+            if (ReviveAvailable)
+            {
+                Revive();
+                return;
+            }
+
             animator.SetTrigger("Death");
+            MonoBehaviour[] scripts = gameObject.GetComponents<MonoBehaviour>();
+            foreach (MonoBehaviour script in scripts)
+            {
+                script.enabled = false;
+            }
+        }
         if (amount < 0)
             animator.SetTrigger("Damaged");
         Debug.Log($"{currentHealth}/{maxHealth}");
     }
 
-    public void onDeathAnimationFinished()
+    private void Revive()
     {
-        gameObject.SetActive(false);
+        throw new NotImplementedException();
+    }
+
+    public void Death()
+    {
+        manager.GameOver();
     }
 
     private void UpdateUILives()
