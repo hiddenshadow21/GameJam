@@ -954,19 +954,8 @@ CanvasRenderer:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-<<<<<<< HEAD
-  m_GameObject: {fileID: 1209880344}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 1.47, y: 0.72, z: 0}
-  m_LocalScale: {x: 0.5129792, y: 0.5129792, z: 0.5129792}
-  m_Children: []
-  m_Father: {fileID: 0}
-  m_RootOrder: 2
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-=======
   m_GameObject: {fileID: 1302940350}
   m_CullTransparentMesh: 1
->>>>>>> feature/Animacje
 --- !u!1 &1351522067
 GameObject:
   m_ObjectHideFlags: 0
@@ -1041,15 +1030,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1351522067}
   m_CullTransparentMesh: 0
-<<<<<<< HEAD
---- !u!1 &1458845544 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 7390711566715313822, guid: d69cb25b57cb73e408e6827e97ec2081,
-    type: 3}
-  m_PrefabInstance: {fileID: 7390711568093932022}
-  m_PrefabAsset: {fileID: 0}
---- !u!1 &1588923399
-=======
 --- !u!1 &1391129951 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 7390711566715313822, guid: d69cb25b57cb73e408e6827e97ec2081,
@@ -1241,7 +1221,6 @@ Transform:
   m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1773598302
->>>>>>> feature/Animacje
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -1343,13 +1322,6 @@ RectTransform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1936296837}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-<<<<<<< HEAD
-  m_LocalPosition: {x: 1.48, y: -0.36, z: 0}
-  m_LocalScale: {x: 0.5129792, y: 0.5129792, z: 0.5129792}
-  m_Children: []
-  m_Father: {fileID: 0}
-  m_RootOrder: 3
-=======
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
@@ -1361,7 +1333,6 @@ RectTransform:
   - {fileID: 828444624}
   m_Father: {fileID: 1025086086}
   m_RootOrder: 1
->>>>>>> feature/Animacje
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -1496,29 +1467,15 @@ CanvasRenderer:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-<<<<<<< HEAD
-  m_GameObject: {fileID: 1704418130}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 0}
-  m_RootOrder: 4
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1001 &7390711568093932022
-=======
   m_GameObject: {fileID: 2020483628}
   m_CullTransparentMesh: 0
 --- !u!1001 &5466195312102085543
->>>>>>> feature/Animacje
 PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-<<<<<<< HEAD
-=======
     - target: {fileID: 5466195310896045243, guid: e4bdb8dbd6bf55f499fbecdca96890d3,
         type: 3}
       propertyPath: m_RootOrder
@@ -1648,7 +1605,6 @@ PrefabInstance:
       propertyPath: m_Color.r
       value: 1
       objectReference: {fileID: 0}
->>>>>>> feature/Animacje
     - target: {fileID: 7390711566715313821, guid: d69cb25b57cb73e408e6827e97ec2081,
         type: 3}
       propertyPath: m_RootOrder
@@ -1711,14 +1667,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7390711566715313823, guid: d69cb25b57cb73e408e6827e97ec2081,
         type: 3}
-<<<<<<< HEAD
-=======
       propertyPath: manager
       value: 
       objectReference: {fileID: 1542061027}
     - target: {fileID: 7390711566715313823, guid: d69cb25b57cb73e408e6827e97ec2081,
         type: 3}
->>>>>>> feature/Animacje
       propertyPath: reviveImg
       value: 
       objectReference: {fileID: 828444625}
@@ -1749,8 +1702,6 @@ PrefabInstance:
       objectReference: {fileID: 1588923401}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d69cb25b57cb73e408e6827e97ec2081, type: 3}
-<<<<<<< HEAD
-=======
 --- !u!1001 &8553129511303082810
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1820,4 +1771,3 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: aa98d312595457c4bbb388bfe15601ea, type: 3}
->>>>>>> feature/Animacje
